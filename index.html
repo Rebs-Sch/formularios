@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formularios</title>
+
+<link rel="stylesheet" href="default.css">
+
+<link href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+
+<!-- Include Editor JS files. -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js"></script>
+
+    <style>
+
+        #cor-favorita{
+            width: 200px;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+
+        #cor-favorita option{
+            width: 200px;
+            padding: 5px 20px;
+        }
+
+        #cor-favorita option[value="opcao_vermelho"]{
+            background-color: red;
+        }
+        #cor-favorita option[value="opcao_verde"]{
+            background-color: green;
+        }
+        #cor-favorita option[value="opcao_azul"]{
+            background-color: blue;
+        }
+
+        input#campo_nome{
+            width: 200px;
+            padding: 5px 20px;
+            border-radius: 5px;
+            border: 0 transparent;
+            outline: 0 transparent;
+
+            transition: all 0.5s;
+        }
+
+        input#campo_nome:focus{
+            background: orange;
+            width: 250px;
+        }
+
+        input[type="submit"]{
+            width: 200px;
+            padding: 5px 20px;
+            border-radius: 5px;
+            background-color: chocolate;
+            transition: all 0.5s;
+        }
+
+        input[type="submit"]:hover{
+            background-color: red;
+        }
+
+    </style>
+
+</head>
+
+    <body>
+
+        <h1>Formuários</h1>
+
+        <h2>Elemento Input</h2>
+
+      <form action="#">
+
+        <div> 
+
+            <label for="campo_nome">Nome:</label>
+            <input type="text" id="campo_nome" name="campo_nome">
+        
+        </div>
+
+        <div> 
+
+            <label for="campo_idade">Idade:</label>
+            <input type="number" name="campo_idade" min="0" max="300">
+        
+        </div>
+        
+        <div> 
+
+            <label for="campo_cor">Cor:</label>
+            <input type="color" name="campo_cor">
+        
+        </div>
+        
+        <div> 
+
+            <label for="campo_arquivo">Arquivo:</label>
+            <input type="file" name="campo_arquivo">
+
+        </div>
+
+            <input type="radio" name="campo_turno">
+            manha
+
+            <input type="radio" name="campo_turno">
+            tarde
+        
+            <input type="radio" name="campo_turno">
+            noite
+        
+        </div>
+
+        <div>
+
+            <input type="submit">
+
+        </div>
+
+        <div>
+            <label for="id_prato">
+                Prato principal <input type="checkbox" value="prato_principal" id="id_prato" name="opcoes">
+            </label>
+            <label for="id_salada">
+                Salada <input type="checkbox" value="salada" id="id_salada" name="opcoes">
+            </label>
+            <label for="id_sobremesa">
+                Sobremesa <input type="checkbox" value="sobremesa" id="id_sobremesa" name="opcoes">
+            </label>
+        </div>
+
+        <div>
+            <select name="cor_favorita" id="cor-favorita" required>
+                <option value=""> selecione uma opção ai</option>
+
+                <option value="opcao_verde">verde</option>
+                <option value="opcao_vermelho">vermelho</option>
+                <option value="opcao_azul">azul</option>
+            </select>
+        </div>
+
+        <div>
+
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        </div>
+
+      </form>
+    
+      <script>
+        new FroalaEditor('textarea');
+      </script>
+
+    </body>
+
+</html>
